@@ -67,7 +67,7 @@ class Account(JSONTrait):
         client.headers["content-type"] = "application/json"
         client.headers["authorization"] = TOKEN
         client.headers["x-twitter-active-user"] = "yes"
-        client.headers["x-twitter-client-language"] = "en"
+        client.headers["x-twitter-client-language"] = "ja"
 
         if "ct0" in client.cookies:
             client.headers["x-csrf-token"] = client.cookies["ct0"]
