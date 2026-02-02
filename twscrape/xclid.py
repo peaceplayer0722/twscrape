@@ -54,7 +54,18 @@ def get_scripts_list(text: str):
         for k, v in json.loads(scripts).items():
             yield script_url(k, f"{v}a")
     except json.decoder.JSONDecodeError as e:
-        raise Exception("Failed to parse scripts") from e
+        # Fix unquoted keys like: node_modules_pnpm_ws_8_18_0_node_modules_ws_browser_js
+        # Twitter started returning malformed JSON with unquoted keys
+        try:
+            fixed_scripts = re.sub(
+                r'([,\{])(\s*)([\w$]+)(\s*):(?=\s*")',
+                r'\1\2"\3"\4:',
+                scripts
+            )
+            for k, v in json.loads(fixed_scripts).items():
+                yield script_url(k, f"{v}a")
+        except Exception:
+            raise Exception("Failed to parse scripts") from e
 
 
 # MARK: XClientTxId parsing
