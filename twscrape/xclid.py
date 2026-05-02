@@ -60,12 +60,17 @@ def _js_obj_to_dict(s: str) -> dict:
 
 
 def get_scripts_list(text: str) -> Iterator[str]:
-    # u.u = e => "" + (({name_map})[e] || e) + "." + ({hash_map})[e] + "a.js"
-    # Two separate maps: chunk_id → chunk_name, chunk_id → hash.  
+    # X.u = e => "" + (({name_map})[e] || e) + "." + ({hash_map})[e] + "a.js"
+    # Two separate maps: chunk_id → chunk_name, chunk_id → hash.
     try:
-        name_raw = text.split('u.u=e=>""+(({')[1].split('})[e]||e)')[0]
-        hash_raw = text.split('|e)+"."+({')[1].split('})[e]+"a.js"')[0]
-        names  = _js_obj_to_dict(name_raw)
+        m = re.search(r'[\w_]+\.u=e=>""\+\(\(\{', text)
+        if not m:
+            raise IndexError("script URL builder not found")
+        rest = text[m.end():]
+        name_raw = rest.split('})[e]||e)')[0]
+        rest_after = rest[len(name_raw):]
+        hash_raw = rest_after.split('"."+({')[1].split('})[e]+"a.js"')[0]
+        names = _js_obj_to_dict(name_raw)
         hashes = _js_obj_to_dict(hash_raw)
         for k, hash_val in hashes.items():
             name = names.get(k, k)
