@@ -12,9 +12,9 @@ import httpx
 from fake_useragent import UserAgent
 
 
-def _make_client() -> httpx.AsyncClient:
+def _make_client(proxy: str | None = None) -> httpx.AsyncClient:
     headers = {"user-agent": UserAgent().chrome}
-    return httpx.AsyncClient(headers=headers, follow_redirects=True)
+    return httpx.AsyncClient(headers=headers, follow_redirects=True, proxy=proxy)
 
 
 async def get_tw_page_text(url: str, clt: httpx.AsyncClient | None = None):
@@ -269,8 +269,8 @@ async def load_keys(soup: bs4.BeautifulSoup) -> tuple[list[int], str]:
 
 class XClIdGen:
     @staticmethod
-    async def create(clt: httpx.AsyncClient | None = None) -> "XClIdGen":
-        text = await get_tw_page_text("https://x.com/tesla", clt=clt)
+    async def create(clt: httpx.AsyncClient | None = None, proxy: str | None = None) -> "XClIdGen":
+        text = await get_tw_page_text("https://x.com/tesla", clt=clt or _make_client(proxy=proxy))
         soup = bs4.BeautifulSoup(text, "html.parser")
 
         vk_bytes, anim_key = await load_keys(soup)
