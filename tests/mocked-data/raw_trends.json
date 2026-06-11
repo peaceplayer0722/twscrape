@@ -1,562 +1,1550 @@
 {
-  "data": {
-    "timeline": {
-      "timeline": {
-        "instructions": [
-          {
-            "type": "TimelineClearCache"
-          },
-          {
-            "type": "TimelineTerminateTimeline",
-            "direction": "Bottom"
-          },
-          {
-            "type": "TimelineAddEntries",
-            "entries": [
-              {
-                "entryId": "trend-Hield",
-                "sortIndex": "1897838079637454848",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Hield",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Hield&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgFSGllbGQAAA=="
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "1,699 posts",
-                      "url": {
-                        "url": "twitter://search/?query=Hield&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgFSGllbGQAAA=="
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAFSGllbGQGAAQAAQgABgAAAAMA"
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Marchand",
-                "sortIndex": "1897838079637454847",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Marchand",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Marchand&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgITWFyY2hhbmQAAA=="
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "3,157 posts",
-                      "url": {
-                        "url": "twitter://search/?query=Marchand&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgITWFyY2hhbmQAAA=="
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAITWFyY2hhbmQGAAQAAggABgAAAAMA"
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Draymond",
-                "sortIndex": "1897838079637454846",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Draymond",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Draymond&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgIRHJheW1vbmQAAA=="
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "9,409 posts",
-                      "url": {
-                        "url": "twitter://search/?query=Draymond&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgIRHJheW1vbmQAAA=="
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAIRHJheW1vbmQGAAQAAwgABgAAAAMA"
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Shaq",
-                "sortIndex": "1897838079637454845",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Shaq",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Shaq&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgEU2hhcQAA"
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "12K posts",
-                      "url": {
-                        "url": "twitter://search/?query=Shaq&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgEU2hhcQAA"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAEU2hhcQYABAAECAAGAAAAAwA="
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Chuck",
-                "sortIndex": "1897838079637454844",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Chuck",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Chuck&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgFQ2h1Y2sAAA=="
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "37.6K posts",
-                      "url": {
-                        "url": "twitter://search/?query=Chuck&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgFQ2h1Y2sAAA=="
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAFQ2h1Y2sGAAQABQgABgAAAAMA"
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Nets",
-                "sortIndex": "1897838079637454843",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Nets",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Nets&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgETmV0cwAA"
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "12K posts",
-                      "url": {
-                        "url": "twitter://search/?query=Nets&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgETmV0cwAA"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAETmV0cwYABAAGCAAGAAAAAwA="
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "trend-Bengals",
-                "sortIndex": "1897838079637454842",
-                "content": {
-                  "entryType": "TimelineTimelineItem",
-                  "__typename": "TimelineTimelineItem",
-                  "itemContent": {
-                    "itemType": "TimelineTrend",
-                    "__typename": "TimelineTrend",
-                    "name": "Bengals",
-                    "trend_url": {
-                      "url": "twitter://search/?query=Bengals&src=trend_click&pc=true&vertical=trends",
-                      "urlType": "DeepLink",
-                      "urtEndpointOptions": {
-                        "requestParams": [
-                          {
-                            "key": "cd",
-                            "value": "HBgHQmVuZ2FscwAA"
-                          }
-                        ]
-                      }
-                    },
-                    "trend_metadata": {
-                      "domain_context": "Trending in Sports",
-                      "meta_description": "21.9K posts",
-                      "url": {
-                        "url": "twitter://search/?query=Bengals&src=trend_click&pc=true&vertical=trends",
-                        "urlType": "DeepLink",
-                        "urtEndpointOptions": {
-                          "requestParams": [
-                            {
-                              "key": "cd",
-                              "value": "HBgHQmVuZ2FscwAA"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "feedbackInfo": {
-                    "clientEventInfo": {
-                      "action": "click",
-                      "component": "trends",
-                      "element": "feedback"
-                    },
-                    "feedbackKeys": [
-                      "-1336659320",
-                      "1628041751",
-                      "15718569",
-                      "-619311538",
-                      "-1457103155",
-                      "2103484841"
-                    ],
-                    "feedbackMetadata": "DwABCwAAAAEAAAAHQmVuZ2FscwYABAAHCAAGAAAAAwA="
-                  },
-                  "clientEventInfo": {
-                    "component": "unified_events",
-                    "element": "trend",
-                    "details": {
-                      "timelinesDetails": {
-                        "controllerData": "DAACDAAQDAABCgABo8eUwO2g7DYAAAAA"
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "entryId": "cursor-top-1897838079637454849",
-                "sortIndex": "1897838079637454849",
-                "content": {
-                  "entryType": "TimelineTimelineCursor",
-                  "__typename": "TimelineTimelineCursor",
-                  "value": "DAAJAAA",
-                  "cursorType": "Top"
-                }
-              }
-            ]
-          }
-        ],
-        "responseObjects": {
-          "feedbackActions": [
+  "globalObjects": {
+    "tweets": {},
+    "users": {},
+    "moments": {},
+    "cards": {},
+    "places": {},
+    "media": {},
+    "broadcasts": {},
+    "topics": {},
+    "lists": {}
+  },
+  "timeline": {
+    "id": "guide-trends-candidate-page-4-2060774745686933504",
+    "instructions": [
+      {
+        "clearCache": {}
+      },
+      {
+        "addEntries": {
+          "entries": [
             {
-              "key": "-619311538",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "Not interested in this",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_not_interested_in_this_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "Inline"
+              "entryId": "cursor:2",
+              "sortIndex": "3",
+              "content": {
+                "operation": {
+                  "cursor": {
+                    "value": "DefaultTopCursorValue",
+                    "cursorType": "Top"
+                  }
+                }
               }
             },
             {
-              "key": "15718569",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "This trend is abusive or harmful",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_abusive_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "Inline"
+              "entryId": "trends",
+              "sortIndex": "2",
+              "content": {
+                "timelineModule": {
+                  "items": [
+                    {
+                      "entryId": "trends-%23%E3%81%99%E3%81%86%E3%81%A1%E3%82%83%E3%82%93%E5%AF%86%E4%BC%9A",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#すうちゃん密会",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E3%81%99%E3%81%86%E3%81%A1%E3%82%83%E3%82%93%E5%AF%86%E4%BC%9A&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgWI+OBmeOBhuOBoeOCg+OCk+WvhuS8mhgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E3%81%99%E3%81%86%E3%81%A1%E3%82%83%E3%82%93%E5%AF%86%E4%BC%9A&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgWI+OBmeOBhuOBoeOCg+OCk+WvhuS8mhgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "日本のトレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAAALAAQAAAAWI+OBmeOBhuOBoeOCg+OCk+WvhuS8mg8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 0,
+                                  "trendName": "#すうちゃん密会",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAWI+OBmeOBhuOBoeOCg+OCk+WvhuS8mgoAAwbvhGv8eDh0BgAEAAAPAAULAAAAAAgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%83%95%E3%82%A1%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%AD%E3%83%BC",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "ファールスロー",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%AD%E3%83%BC&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgV44OV44Kh44O844Or44K544Ot44O8GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%AD%E3%83%BC&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgV44OV44Kh44O844Or44K544Ot44O8GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "日本のトレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMAAQsABAAAABXjg5XjgqHjg7zjg6vjgrnjg63jg7wPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 1,
+                                  "trendName": "ファールスロー",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAV44OV44Kh44O844Or44K544Ot44O8CgADBu+Ea/x4OHQGAAQAAQ8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E8%93%AE%E3%83%8E%E7%A9%BA6th%E7%A5%9E%E5%A5%88%E5%B7%9DDay1",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#蓮ノ空6th神奈川Day1",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E8%93%AE%E3%83%8E%E7%A9%BA6th%E7%A5%9E%E5%A5%88%E5%B7%9DDay1&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgaI+iTruODjuepujZ0aOelnuWliOW3nURheTEYJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E8%93%AE%E3%83%8E%E7%A9%BA6th%E7%A5%9E%E5%A5%88%E5%B7%9DDay1&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgaI+iTruODjuepujZ0aOelnuWliOW3nURheTEYJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                  }
+                                }
+                              },
+                              "domainContext": "人気の画像 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAAILAAQAAAAaI+iTruODjuepujZ0aOelnuWliOW3nURheTEKAAccmSDiOtbABA8ACQoAAAABE128S0WUUAIKAAoTXbxLRZRQAg8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 2,
+                                  "trendName": "#蓮ノ空6th神奈川Day1",
+                                  "clusterId": "2060714460520562692",
+                                  "topicIds": [
+                                    "1395478491030638594"
+                                  ],
+                                  "displayedTopicId": "1395478491030638594",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAaI+iTruODjuepujZ0aOelnuWliOW3nURheTEKAAMG74Rr/Hg4dAYABAACDwAFCwAAAAAIAAYAAAADAA==",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-CL%E6%B1%BA%E5%8B%9D",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "CL決勝",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=CL%E6%B1%BA%E5%8B%9D&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgIQ0zmsbrli50YJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=CL%E6%B1%BA%E5%8B%9D&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgIQ0zmsbrli50YJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMAAwsABAAAAAhDTOaxuuWLnQoABxyZS8/02kAADwAJCgAAAAILxFkBqNVgAQou066plFAACgAKC8RZAajVYAEPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 3,
+                                  "trendName": "CL決勝",
+                                  "clusterId": "2060761661036969984",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAIQ0zmsbrli50KAAMG74Rr/Hg4dAYABAADDwAFCwAAAAAIAAYAAAADAA==",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%83%AA%E3%83%BC%E3%82%B0%E6%B1%BA%E5%8B%9D",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "チャンピオンズリーグ決勝",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%83%AA%E3%83%BC%E3%82%B0%E6%B1%BA%E5%8B%9D&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgk44OB44Oj44Oz44OU44Kq44Oz44K644Oq44O844Kw5rG65YudGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%82%BA%E3%83%AA%E3%83%BC%E3%82%B0%E6%B1%BA%E5%8B%9D&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgk44OB44Oj44Oz44OU44Kq44Oz44K644Oq44O844Kw5rG65YudGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMABAsABAAAACTjg4Hjg6Pjg7Pjg5Tjgqrjg7Pjgrrjg6rjg7zjgrDmsbrli50PAAkKAAAAAgvEWQGo1WABCi7TrqmUUAAKAAoLxFkBqNVgAQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 4,
+                                  "trendName": "チャンピオンズリーグ決勝",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAk44OB44Oj44Oz44OU44Kq44Oz44K644Oq44O844Kw5rG65YudCgADBu+Ea/x4OHQGAAQABA8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%83%B4%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%8B%E3%83%A3",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "ヴィティーニャ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%83%B4%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%8B%E3%83%A3&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgV44O044Kj44OG44Kj44O844OL44OjGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%83%B4%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%8B%E3%83%A3&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgV44O044Kj44OG44Kj44O844OL44OjGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMABQsABAAAABXjg7TjgqPjg4bjgqPjg7zjg4vjg6MPAAkKAAAAAgvEWQGo1WABCi7TrqmUUAAKAAoLxFkBqNVgAQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 5,
+                                  "trendName": "ヴィティーニャ",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAV44O044Kj44OG44Kj44O844OL44OjCgADBu+Ea/x4OHQGAAQABQ8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%82%A6%E3%83%BC%E3%83%87%E3%82%B4%E3%83%BC%E3%83%AB",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "ウーデゴール",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%82%A6%E3%83%BC%E3%83%87%E3%82%B4%E3%83%BC%E3%83%AB&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgS44Km44O844OH44K044O844OrGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%82%A6%E3%83%BC%E3%83%87%E3%82%B4%E3%83%BC%E3%83%AB&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgS44Km44O844OH44K044O844OrGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMABgsABAAAABLjgqbjg7zjg4fjgrTjg7zjg6sPAAkKAAAAAgvEWQGo1WABCi7TrqmUUAAKAAoLxFkBqNVgAQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 6,
+                                  "trendName": "ウーデゴール",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAS44Km44O844OH44K044O844OrCgADBu+Ea/x4OHQGAAQABg8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E5%B5%90%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#嵐ありがとう",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E5%B5%90%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgTI+W1kOOBguOCiuOBjOOBqOOBhhgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E5%B5%90%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgTI+W1kOOBguOCiuOBjOOBqOOBhhgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "音楽 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAAcLAAQAAAATI+W1kOOBguOCiuOBjOOBqOOBhg8ACQoAAAADC8MDL9xUMAALQQgRplVAAQtBB+bNVEAACgAKC8MDL9xUMAAPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 7,
+                                  "trendName": "#嵐ありがとう",
+                                  "topicIds": [
+                                    "847524658970636288",
+                                    "810938279801470977",
+                                    "810938095772123136"
+                                  ],
+                                  "displayedTopicId": "847524658970636288",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAATI+W1kOOBguOCiuOBjOOBqOOBhgoAAwbvhGv8eDh0BgAEAAcPAAULAAAAAAgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E8%B6%85%E7%89%B9%E6%80%A5_%E3%82%AC%E3%83%81%E5%A4%A2%E4%B8%AD",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#超特急_ガチ夢中",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E8%B6%85%E7%89%B9%E6%80%A5_%E3%82%AC%E3%83%81%E5%A4%A2%E4%B8%AD&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgXI+i2heeJueaApV/jgqzjg4HlpKLkuK0YJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E8%B6%85%E7%89%B9%E6%80%A5_%E3%82%AC%E3%83%81%E5%A4%A2%E4%B8%AD&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgXI+i2heeJueaApV/jgqzjg4HlpKLkuK0YJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                  }
+                                }
+                              },
+                              "domainContext": "音楽 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAAgLAAQAAAAXI+i2heeJueaApV/jgqzjg4HlpKLkuK0PAAULAAAAAQAAAAoj6LaF54m55oClCgAHHJkpYPHX0AIPAAkKAAAABAvDAy/cVDAAC0EIEaZVQAELQQfmzVRAABC7CYEfFBAACgAKC8MDL9xUMAAPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 8,
+                                  "trendName": "#超特急_ガチ夢中",
+                                  "relatedTerms": [
+                                    "#超特急"
+                                  ],
+                                  "clusterId": "2060723800849764354",
+                                  "topicIds": [
+                                    "847524658970636288",
+                                    "810938279801470977",
+                                    "810938095772123136",
+                                    "1205567775428579328"
+                                  ],
+                                  "displayedTopicId": "847524658970636288",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAXI+i2heeJueaApV/jgqzjg4HlpKLkuK0KAAMG74Rr/Hg4dAYABAAIDwAFCwAAAAEAAAAKI+i2heeJueaApQgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E5%B5%90%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "嵐のライブ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E5%B5%90%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgP5bWQ44Gu44Op44Kk44OWGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E5%B5%90%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%96&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgP5bWQ44Gu44Op44Kk44OWGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "音楽 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMACQsABAAAAA/ltZDjga7jg6njgqTjg5YKAAccmQdls5ZwAQ8ACQoAAAAEC8MDL9xUMAALQQgRplVAAQtBB+bNVEAADjHvhEpUcAEKAAoLwwMv3FQwAA8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 9,
+                                  "trendName": "嵐のライブ",
+                                  "clusterId": "2060686437884784641",
+                                  "topicIds": [
+                                    "847524658970636288",
+                                    "810938279801470977",
+                                    "810938095772123136",
+                                    "1022861941851582465"
+                                  ],
+                                  "displayedTopicId": "847524658970636288",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAP5bWQ44Gu44Op44Kk44OWCgADBu+Ea/x4OHQGAAQACQ8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%83%A1%E3%83%BC%E3%83%AB%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "メールボックス",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%83%A1%E3%83%BC%E3%83%AB%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgV44Oh44O844Or44Oc44OD44Kv44K5GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%83%A1%E3%83%BC%E3%83%AB%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgV44Oh44O844Or44Oc44OD44Kv44K5GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "エンターテインメント · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMACgsABAAAABXjg6Hjg7zjg6vjg5zjg4Pjgq/jgrkPAAkKAAAABAumqRHLVOAADupPkyLV4AIUsDbwYtUgARMwiFlxlFABCgAKC6apEctU4AAPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 10,
+                                  "trendName": "メールボックス",
+                                  "topicIds": [
+                                    "839544274442051584",
+                                    "1074758954444513282",
+                                    "1490751882737819649",
+                                    "1382755003341754369"
+                                  ],
+                                  "displayedTopicId": "839544274442051584",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAV44Oh44O844Or44Oc44OD44Kv44K5CgADBu+Ea/x4OHQGAAQACg8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E3%83%90%E3%82%AE%E3%82%AF%E3%83%A9",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#バギクラ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E3%83%90%E3%82%AE%E3%82%AF%E3%83%A9&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgNI+ODkOOCruOCr+ODqRgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E3%83%90%E3%82%AE%E3%82%AF%E3%83%A9&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgNI+ODkOOCruOCr+ODqRgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "日本のトレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAAsLAAQAAAANI+ODkOOCruOCr+ODqQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 11,
+                                  "trendName": "#バギクラ",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAANI+ODkOOCruOCr+ODqQoAAwbvhGv8eDh0BgAEAAsPAAULAAAAAAgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E6%89%8B%E9%95%B7%E8%B6%B3%E9%95%B7",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "手長足長",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E6%89%8B%E9%95%B7%E8%B6%B3%E9%95%B7&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgM5omL6ZW36Laz6ZW3GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E6%89%8B%E9%95%B7%E8%B6%B3%E9%95%B7&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgM5omL6ZW36Laz6ZW3GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "日本のトレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMADAsABAAAAAzmiYvplbfotrPplbcKAAccmTLLE1tAAA8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 12,
+                                  "trendName": "手長足長",
+                                  "clusterId": "2060734152283209728",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAM5omL6ZW36Laz6ZW3CgADBu+Ea/x4OHQGAAQADA8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E7%94%9F%E7%A5%9E%E3%82%82%E3%82%93%E3%81%96%E3%81%88%E3%82%82%E3%82%93",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#生神もんざえもん",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E7%94%9F%E7%A5%9E%E3%82%82%E3%82%93%E3%81%96%E3%81%88%E3%82%82%E3%82%93&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgZI+eUn+elnuOCguOCk+OBluOBiOOCguOCkxgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E7%94%9F%E7%A5%9E%E3%82%82%E3%82%93%E3%81%96%E3%81%88%E3%82%82%E3%82%93&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgZI+eUn+elnuOCguOCk+OBluOBiOOCguOCkxgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "人気の画像 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAA0LAAQAAAAZI+eUn+elnuOCguOCk+OBluOBiOOCguOCkw8ACQoAAAABE128S0WUUAIKAAoTXbxLRZRQAg8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 13,
+                                  "trendName": "#生神もんざえもん",
+                                  "topicIds": [
+                                    "1395478491030638594"
+                                  ],
+                                  "displayedTopicId": "1395478491030638594",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAZI+eUn+elnuOCguOCk+OBluOBiOOCguOCkwoAAwbvhGv8eDh0BgAEAA0PAAULAAAAAAgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%82%A2%E3%83%AB%E3%83%86%E3%82%BF",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "アルテタ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%82%A2%E3%83%AB%E3%83%86%E3%82%BF&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgM44Ki44Or44OG44K/GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%82%A2%E3%83%AB%E3%83%86%E3%82%BF&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgM44Ki44Or44OG44K/GCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMADgsABAAAAAzjgqLjg6vjg4bjgr8PAAkKAAAAAgvEWQGo1WABCi7TrqmUUAAKAAoLxFkBqNVgAQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 14,
+                                  "trendName": "アルテタ",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAM44Ki44Or44OG44K/CgADBu+Ea/x4OHQGAAQADg8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E6%97%A5%E6%9B%9C%E6%97%A5%E3%81%A0%E3%81%97%E9%82%A6%E3%83%AD%E3%83%83%E3%82%AF%E5%A5%BD%E3%81%8D%E3%81%AA%E4%BA%BA%E3%81%A8%E7%B9%8B%E3%81%8C%E3%82%8A%E3%81%9F%E3%81%84",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#日曜日だし邦ロック好きな人と繋がりたい",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E6%97%A5%E6%9B%9C%E6%97%A5%E3%81%A0%E3%81%97%E9%82%A6%E3%83%AD%E3%83%83%E3%82%AF%E5%A5%BD%E3%81%8D%E3%81%AA%E4%BA%BA%E3%81%A8%E7%B9%8B%E3%81%8C%E3%82%8A%E3%81%9F%E3%81%84&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBg6I+aXpeabnOaXpeOBoOOBl+mCpuODreODg+OCr+WlveOBjeOBquS6uuOBqOe5i+OBjOOCiuOBn+OBhBgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E6%97%A5%E6%9B%9C%E6%97%A5%E3%81%A0%E3%81%97%E9%82%A6%E3%83%AD%E3%83%83%E3%82%AF%E5%A5%BD%E3%81%8D%E3%81%AA%E4%BA%BA%E3%81%A8%E7%B9%8B%E3%81%8C%E3%82%8A%E3%81%9F%E3%81%84&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBg6I+aXpeabnOaXpeOBoOOBl+mCpuODreODg+OCr+WlveOBjeOBquS6uuOBqOe5i+OBjOOCiuOBn+OBhBgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "日本のトレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADAA8LAAQAAAA6I+aXpeabnOaXpeOBoOOBl+mCpuODreODg+OCr+WlveOBjeOBquS6uuOBqOe5i+OBjOOCiuOBn+OBhA8ABQsAAAABAAAANCPml6Xmm5zml6XjgaDjgZfpgqbjg63jg4Pjgq/lpb3jgY3jgajnuYvjgYzjgorjgZ/jgYQKAAccmThNn5egAA8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 15,
+                                  "trendName": "#日曜日だし邦ロック好きな人と繋がりたい",
+                                  "relatedTerms": [
+                                    "#日曜日だし邦ロック好きと繋がりたい"
+                                  ],
+                                  "clusterId": "2060740210539864064",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAA6I+aXpeabnOaXpeOBoOOBl+mCpuODreODg+OCr+WlveOBjeOBquS6uuOBqOe5i+OBjOOCiuOBn+OBhAoAAwbvhGv8eDh0BgAEAA8PAAULAAAAAQAAADQj5pel5puc5pel44Gg44GX6YKm44Ot44OD44Kv5aW944GN44Go57mL44GM44KK44Gf44GECAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E3%81%97%E3%81%90%E3%82%8C%E3%81%86%E3%81%84%E3%83%A9%E3%82%A4%E3%83%962026",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#しぐれういライブ2026",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E3%81%97%E3%81%90%E3%82%8C%E3%81%86%E3%81%84%E3%83%A9%E3%82%A4%E3%83%962026&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgdI+OBl+OBkOOCjOOBhuOBhOODqeOCpOODljIwMjYYJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E3%81%97%E3%81%90%E3%82%8C%E3%81%86%E3%81%84%E3%83%A9%E3%82%A4%E3%83%962026&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgdI+OBl+OBkOOCjOOBhuOBhOODqeOCpOODljIwMjYYJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwAA"
+                                  }
+                                }
+                              },
+                              "domainContext": "人気の画像 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADABALAAQAAAAdI+OBl+OBkOOCjOOBhuOBhOODqeOCpOODljIwMjYPAAkKAAAAARNdvEtFlFACCgAKE128S0WUUAIPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 16,
+                                  "trendName": "#しぐれういライブ2026",
+                                  "topicIds": [
+                                    "1395478491030638594"
+                                  ],
+                                  "displayedTopicId": "1395478491030638594",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAdI+OBl+OBkOOCjOOBhuOBhOODqeOCpOODljIwMjYKAAMG74Rr/Hg4dAYABAAQDwAFCwAAAAAIAAYAAAADAA==",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%83%8F%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%84",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "ハヴァーツ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%83%8F%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%84&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgP44OP44O044Kh44O844OEGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%83%8F%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%84&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgP44OP44O044Kh44O844OEGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMAEQsABAAAAA/jg4/jg7TjgqHjg7zjg4QPAAULAAAAAQAAABvjg4/jg7TjgqHjg7zjg4Tjga7jgrTjg7zjg6sKAAccmUvP9NpAAA8ACQoAAAACC8RZAajVYAEKLtOuqZRQAAoACgvEWQGo1WABDwAMCgAAAAACAA0AAA==",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 17,
+                                  "trendName": "ハヴァーツ",
+                                  "relatedTerms": [
+                                    "ハヴァーツのゴール"
+                                  ],
+                                  "clusterId": "2060761661036969984",
+                                  "topicIds": [
+                                    "847900493514891265",
+                                    "733756536430809088"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAP44OP44O044Kh44O844OECgADBu+Ea/x4OHQGAAQAEQ8ABQsAAAABAAAAG+ODj+ODtOOCoeODvOODhOOBruOCtOODvOODqwgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%E3%82%A4%E3%83%A9%E3%82%AA%E3%83%A9",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "イラオラ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%E3%82%A4%E3%83%A9%E3%82%AA%E3%83%A9&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgM44Kk44Op44Kq44OpGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%E3%82%A4%E3%83%A9%E3%82%AA%E3%83%A9&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgM44Kk44Op44Kq44OpGCQxYmM5MTkxMS1kOGQzLTQ1N2ItYmQxYS0zOTU0YzM4NTU1YTMAAA=="
+                                  }
+                                }
+                              },
+                              "domainContext": "スポーツ · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADM6dGFpbG9yZWRfcmVxdWVzdDplbnRpdHlfdHJlbmQ6dGF4aV9jb3VudHJ5X3NvdXJjZToGAAMAEgsABAAAAAzjgqTjg6njgqrjg6kKAAccmVKyeFewAg8ACQoAAAABC8RZAajVYAEKAAoLxFkBqNVgAQ8ADAoAAAAAAgANAAA=",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:entity_trend:taxi_country_source:",
+                                  "position": 18,
+                                  "trendName": "イラオラ",
+                                  "clusterId": "2060769230975381506",
+                                  "topicIds": [
+                                    "847900493514891265"
+                                  ],
+                                  "displayedTopicId": "847900493514891265",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAM44Kk44Op44Kq44OpCgADBu+Ea/x4OHQGAAQAEg8ABQsAAAAACAAGAAAAAwA=",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "entryId": "trends-%23%E3%81%82%E3%81%A3%E3%81%A1%E3%81%93%E3%81%A3%E3%81%A1A%E3%81%87%C7%83",
+                      "item": {
+                        "content": {
+                          "trend": {
+                            "name": "#あっちこっちAぇǃ",
+                            "url": {
+                              "urlType": "DeepLink",
+                              "url": "twitter://search/?query=%23%E3%81%82%E3%81%A3%E3%81%A1%E3%81%93%E3%81%A3%E3%81%A1A%E3%81%87%C7%83&src=trend_click&pc=true&vertical=trends",
+                              "urtEndpointOptions": {
+                                "requestParams": {
+                                  "cd": "HBgZI+OBguOBo+OBoeOBk+OBo+OBoUHjgYfHgxgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                }
+                              }
+                            },
+                            "associatedCardUrls": [],
+                            "trendMetadata": {
+                              "url": {
+                                "urlType": "DeepLink",
+                                "url": "twitter://search/?query=%23%E3%81%82%E3%81%A3%E3%81%A1%E3%81%93%E3%81%A3%E3%81%A1A%E3%81%87%C7%83&src=trend_click&pc=true&vertical=trends",
+                                "urtEndpointOptions": {
+                                  "requestParams": {
+                                    "cd": "HBgZI+OBguOBo+OBoeOBk+OBo+OBoUHjgYfHgxgkMWJjOTE5MTEtZDhkMy00NTdiLWJkMWEtMzk1NGMzODU1NWEzAAA="
+                                  }
+                                }
+                              },
+                              "domainContext": "音楽 · トレンド"
+                            }
+                          }
+                        },
+                        "clientEventInfo": {
+                          "component": "trends",
+                          "element": "trend",
+                          "details": {
+                            "guideDetails": {
+                              "identifier": "DAABDAABCwABAAAADXRyZW5kc19tb2R1bGULAAIAAAAGdHJlbmRzAAAPAAIMAAAAAQwAAQsAAQAAAA10cmVuZHNfbW9kdWxlCwACAAAABnRyZW5kcwAAAA==",
+                              "token": "CwABAAAAJDFiYzkxOTExLWQ4ZDMtNDU3Yi1iZDFhLTM5NTRjMzg1NTVhMwsAAgAAADQ6dGFpbG9yZWRfcmVxdWVzdDpoYXNodGFnX3RyZW5kOnRheGlfY291bnRyeV9zb3VyY2U6BgADABMLAAQAAAAZI+OBguOBo+OBoeOBk+OBo+OBoUHjgYfHgw8ACQoAAAADC8MDL9xUMAALQQgRplVAAQtBB+bNVEAACgAKC8MDL9xUMAAPAAwKAAAAAAIADQAA",
+                              "transparentGuideDetails": {
+                                "trendMetadata": {
+                                  "impressionId": "1bc91911-d8d3-457b-bd1a-3954c38555a3",
+                                  "impressionToken": ":tailored_request:hashtag_trend:taxi_country_source:",
+                                  "position": 19,
+                                  "trendName": "#あっちこっちAぇǃ",
+                                  "topicIds": [
+                                    "847524658970636288",
+                                    "810938279801470977",
+                                    "810938095772123136"
+                                  ],
+                                  "displayedTopicId": "847524658970636288",
+                                  "associatedCuratedTweetIds": [],
+                                  "containsCuratedTitle": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "feedbackInfo": {
+                          "feedbackKeys": [
+                            "trend_not_interested_in_this_feedback_key",
+                            "trend_abusive_or_harmful_feedback_key"
+                          ],
+                          "feedbackMetadata": "DwABCwAAAAEAAAAZI+OBguOBo+OBoeOBk+OBo+OBoUHjgYfHgwoAAwbvhGv8eDh0BgAEABMPAAULAAAAAAgABgAAAAMA",
+                          "clientEventInfo": {
+                            "component": "trends",
+                            "element": "feedback",
+                            "action": "click"
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "displayType": "Vertical",
+                  "clientEventInfo": {
+                    "component": "trends",
+                    "details": {
+                      "guideDetails": {
+                        "identifier": "DAABDAABCwABAAAABnRyZW5kcwsAAgAAAAZ0cmVuZHMAAA8AAgwAAAABDAABCwABAAAABnRyZW5kcwsAAgAAAAZ0cmVuZHMAAAA="
+                      }
+                    }
+                  }
+                }
               }
             },
             {
-              "key": "-1457103155",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "This trend is a duplicate",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_duplicate_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "Inline"
-              }
-            },
-            {
-              "key": "-1336659320",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "The associated content is not relevant",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_irrelevant_content_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "BottomSheet"
-              }
-            },
-            {
-              "key": "1628041751",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "This trend is spam",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_spam_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "Inline"
-              }
-            },
-            {
-              "key": "2103484841",
-              "value": {
-                "feedbackType": "SeeFewer",
-                "prompt": "This trend is harmful or spammy",
-                "confirmation": "Thanks. Refresh this page to update these trends.",
-                "feedbackUrl": "/2/guide/insert_feedback/trend_abusive_or_harmful_feedback_key.json",
-                "hasUndoAction": false,
-                "confirmationDisplayType": "BottomSheet"
+              "entryId": "cursor:1",
+              "sortIndex": "1",
+              "content": {
+                "operation": {
+                  "cursor": {
+                    "value": "DefaultBottomCursorValue",
+                    "cursorType": "Bottom"
+                  }
+                }
               }
             }
           ]
+        }
+      },
+      {
+        "terminateTimeline": {
+          "direction": "Bottom"
+        }
+      }
+    ],
+    "responseObjects": {
+      "feedbackActions": {
+        "trend_irrelevant_content_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "コンテンツの関連性が高くありません",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_irrelevant_content_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "BottomSheet"
+        },
+        "spotlight_dismiss_feedback_key": {
+          "feedbackType": "Dismiss",
+          "prompt": "Don't want to see this ad",
+          "confirmation": "Thanks. Refresh this page to update these trends.",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "BottomSheet"
+        },
+        "trend_abusive_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "このトレンドは不適切または攻撃的です",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_abusive_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "Inline"
+        },
+        "guide_not_interested_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "非表示にする",
+          "confirmation": "ありがとうございます。今後同じような内容の表示が少なくなります",
+          "feedbackUrl": "/2/guide/dont_like_this/feedback.json",
+          "hasUndoAction": true,
+          "confirmationDisplayType": "Inline",
+          "icon": "NO"
+        },
+        "guide_see_more_feedback_key": {
+          "feedbackType": "SeeMore",
+          "prompt": "表示回数を増やす",
+          "confirmation": "ありがとうございます。今後同じような内容の表示が多くなります",
+          "feedbackUrl": "/2/guide/show_more/feedback.json",
+          "hasUndoAction": true,
+          "confirmationDisplayType": "BottomSheet"
+        },
+        "trend_spam_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "このトレンドはスパムです",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_spam_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "Inline"
+        },
+        "trend_low_quality_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "このトレンドは不適切です",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_low_quality_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "Inline"
+        },
+        "guide_see_less_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "表示回数を減らす",
+          "confirmation": "ありがとうございます。今後同じような内容の表示が少なくなります",
+          "feedbackUrl": "/2/guide/dont_like_this/feedback.json",
+          "hasUndoAction": true,
+          "confirmationDisplayType": "Inline"
+        },
+        "trend_not_interested_in_this_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "興味がない",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_not_interested_in_this_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "Inline"
+        },
+        "trend_abusive_or_harmful_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "このトレンドは有害であるかスパムです",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_abusive_or_harmful_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "BottomSheet"
+        },
+        "guide_hide_topic_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "トピックをフォロー解除",
+          "confirmation": "ありがとうございます。今後同じような内容の表示が少なくなります",
+          "feedbackUrl": "/2/guide/feedback/hide_topic.json",
+          "hasUndoAction": true,
+          "confirmationDisplayType": "Inline",
+          "icon": "TOPIC_CLOSE"
+        },
+        "trend_duplicate_feedback_key": {
+          "feedbackType": "SeeFewer",
+          "prompt": "このトレンドは重複しています",
+          "confirmation": "ありがとうございます。このページを再読み込みするとトレンドが更新されます。",
+          "feedbackUrl": "/2/guide/insert_feedback/trend_duplicate_feedback_key.json",
+          "hasUndoAction": false,
+          "confirmationDisplayType": "Inline"
         }
       }
     }

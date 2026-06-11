@@ -27,6 +27,7 @@ OP_Bookmarks = "-LGfdImKeQz0xS_jjUwzlA/Bookmarks"
 OP_GenericTimelineById = "CT0YFEFf5GOYa5DJcxM91w/GenericTimelineById"
 
 GQL_URL = "https://x.com/i/api/graphql"
+GUIDE_URL = "https://api.twitter.com/2/guide.json"
 GQL_FEATURES = {  # search values here (view source) https://x.com/
     "articles_preview_enabled": False,
     "c9s_tweet_anatomy_moderator_badge_enabled": True,
@@ -454,24 +455,21 @@ class API:
     # trends
 
     async def trends_raw(self, trend_id: TrendId, limit=-1, kv: KV = None):
-        map = {
-            "trending": "VGltZWxpbmU6DAC2CwABAAAACHRyZW5kaW5nAAA",
-            "news": "VGltZWxpbmU6DAC2CwABAAAABG5ld3MAAA",
-            "sport": "VGltZWxpbmU6DAC2CwABAAAABnNwb3J0cwAA",
-            "entertainment": "VGltZWxpbmU6DAC2CwABAAAADWVudGVydGFpbm1lbnQAAA",
-        }
-        trend_id = map.get(trend_id, trend_id)
-
-        op = OP_GenericTimelineById
-        kv = {
-            "timelineId": trend_id,
+        # Trends are served by the legacy guide.json endpoint. The previously
+        # used GraphQL GenericTimelineById timeline is now rejected by X with
+        # `{"errors":[{"message":"Internal server error","path":["timeline"]}]}`,
+        # so we query the stable guide endpoint instead. guide.json returns the
+        # personalized "trending" tab; the `trend_id` argument is kept for API
+        # compatibility but X no longer exposes the per-category timelines here.
+        params = {
             "count": 20,
-            "withQuickPromoteEligibilityTweetFields": True,
+            "candidate_source": "trends",
             **(kv or {}),
         }
-        async with aclosing(self._gql_items(op, kv, limit=limit)) as gen:
-            async for x in gen:
-                yield x
+        async with QueueClient(self.pool, "trends", self.debug, proxy=self.proxy) as client:
+            rep = await client.get(GUIDE_URL, params=params)
+            if rep is not None:
+                yield rep
 
     async def trends(self, trend_id: TrendId, limit=-1, kv: KV = None):
         async with aclosing(self.trends_raw(trend_id, limit=limit, kv=kv)) as gen:

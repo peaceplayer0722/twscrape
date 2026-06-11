@@ -13,3 +13,4 @@ dist/
 # custom
 *.db
 **/__pycache__/**
+smoke_test_logs/

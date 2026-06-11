@@ -1,3 +1,4 @@
+import asyncio
 import base64
 import hashlib
 import json
@@ -5,7 +6,7 @@ import math
 import random
 import re
 import time
-from typing import Iterator
+from urllib.parse import urljoin
 
 import bs4
 import httpx
@@ -59,7 +60,17 @@ def _js_obj_to_dict(s: str) -> dict:
     return json.loads('{' + s + '}')
 
 
-def get_scripts_list(text: str) -> Iterator[str]:
+ASSET_URL_RE = re.compile(r"https://[\w.-]+/x-web/[\w./-]+\.js")
+
+
+def get_scripts_list(text: str) -> list[str]:
+    # Current X web build (Vite): script bundles are linked directly in the page
+    # under https://abs.twimg.com/x-web/.../*.js (modulepreload links + entry).
+    urls = list(dict.fromkeys(ASSET_URL_RE.findall(text)))
+    if urls:
+        return urls
+
+    # Legacy build fallback: reconstruct URLs from the webpack chunk map
     # X.u = e => "" + (({name_map})[e] || e) + "." + ({hash_map})[e] + "a.js"
     # Two separate maps: chunk_id → chunk_name, chunk_id → hash.
     try:
@@ -72,9 +83,7 @@ def get_scripts_list(text: str) -> Iterator[str]:
         hash_raw = rest_after.split('"."+({')[1].split('})[e]+"a.js"')[0]
         names = _js_obj_to_dict(name_raw)
         hashes = _js_obj_to_dict(hash_raw)
-        for k, hash_val in hashes.items():
-            name = names.get(k, k)
-            yield script_url(name, f"{hash_val}a")
+        return [script_url(names.get(k, k), f"{h}a") for k, h in hashes.items()]
     except (json.JSONDecodeError, IndexError) as e:
         raise Exception("Failed to parse scripts") from e
 
@@ -222,13 +231,51 @@ def parse_vk_bytes(soup: bs4.BeautifulSoup) -> list[int]:
     return list(base64.b64decode(bytes(el, "utf-8")))
 
 
-async def parse_anim_idx(text: str) -> list[int]:
+# File holding the animation indices: legacy build linked `ondemand.s.*.js`,
+# current x-web build dynamically imports `sign.o-*.js` from a bundle chunk.
+# \b guards against substring hits like `design.o-*.js`.
+INDICES_FILE_RE = re.compile(r"(?:\.{0,2}/)?[\w./-]*?\b(?:ondemand\.s|sign\.o)[\w.-]*\.js")
+
+
+async def _find_indices_url(scripts: list[str], clt: httpx.AsyncClient) -> str:
+    # The indices file is not linked in the page directly — it is dynamically
+    # imported from one of the bundle chunks. Scan chunks concurrently and
+    # resolve the first reference we find, then stop downloading the rest.
+    sem = asyncio.Semaphore(16)
+
+    async def fetch(url: str) -> tuple[str, str]:
+        async with sem:
+            try:
+                return url, (await clt.get(url)).text
+            except Exception:
+                return url, ""
+
+    tasks = [asyncio.create_task(fetch(u)) for u in scripts]
+    try:
+        for fut in asyncio.as_completed(tasks):
+            url, body = await fut
+            m = INDICES_FILE_RE.search(body)
+            if m:
+                return urljoin(url, m.group(0))
+    finally:
+        for t in tasks:
+            t.cancel()
+
+    raise Exception("Couldn't get XClientTxId indices script")
+
+
+async def parse_anim_idx(text: str, clt: httpx.AsyncClient | None = None) -> list[int]:
+    clt = clt or _make_client()
     scripts = list(get_scripts_list(text))
-    scripts = [x for x in scripts if "/ondemand.s." in x]
     if not scripts:
         raise Exception("Couldn't get XClientTxId scripts")
 
-    text = await get_tw_page_text(scripts[0])
+    # Legacy build links the indices file directly; current build hides it
+    # behind a dynamic import inside a bundle chunk.
+    direct = [x for x in scripts if INDICES_FILE_RE.search(x)]
+    url = direct[0] if direct else await _find_indices_url(scripts, clt)
+
+    text = await get_tw_page_text(url, clt=clt)
 
     items = [int(x.group(2)) for x in INDICES_REGEX.finditer(text)]
     if not items:
@@ -250,8 +297,10 @@ def parse_anim_arr(soup: bs4.BeautifulSoup, vk_bytes: list[int]) -> list[list[fl
     return arr
 
 
-async def load_keys(soup: bs4.BeautifulSoup) -> tuple[list[int], str]:
-    anim_idx = await parse_anim_idx(str(soup))
+async def load_keys(
+    soup: bs4.BeautifulSoup, clt: httpx.AsyncClient | None = None
+) -> tuple[list[int], str]:
+    anim_idx = await parse_anim_idx(str(soup), clt=clt)
     vk_bytes = parse_vk_bytes(soup)
     anim_arr = parse_anim_arr(soup, vk_bytes)
 
@@ -270,10 +319,11 @@ async def load_keys(soup: bs4.BeautifulSoup) -> tuple[list[int], str]:
 class XClIdGen:
     @staticmethod
     async def create(clt: httpx.AsyncClient | None = None, proxy: str | None = None) -> "XClIdGen":
-        text = await get_tw_page_text("https://x.com/tesla", clt=clt or _make_client(proxy=proxy))
+        clt = clt or _make_client(proxy=proxy)
+        text = await get_tw_page_text("https://x.com/tesla", clt=clt)
         soup = bs4.BeautifulSoup(text, "html.parser")
 
-        vk_bytes, anim_key = await load_keys(soup)
+        vk_bytes, anim_key = await load_keys(soup, clt=clt)
         clid_gen = XClIdGen(vk_bytes, anim_key)
         return clid_gen
 
@@ -300,10 +350,11 @@ class XClIdGen:
 
 
 async def main():
-    text = await get_tw_page_text("https://x.com/elonmusk")
+    clt = _make_client()
+    text = await get_tw_page_text("https://x.com/elonmusk", clt=clt)
     soup = bs4.BeautifulSoup(text, "html.parser")
 
-    vk_bytes, anim_key = await load_keys(soup)
+    vk_bytes, anim_key = await load_keys(soup, clt=clt)
     clid_gen = XClIdGen(vk_bytes, anim_key)
 
     method = "GET"
@@ -313,6 +364,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    import asyncio
-
     asyncio.run(main())

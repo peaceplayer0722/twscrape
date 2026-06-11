@@ -794,5 +794,73 @@ def parse_users(rep: httpx.Response, limit: int = -1) -> Generator[User, None, N
     return _parse_items(rep, "user", limit)  # type: ignore
 
 
+def _guide_url_to_obj(url: dict) -> dict:
+    # guide.json stores requestParams as a `{key: value}` mapping, while the
+    # Trend/TrendUrl models expect a list of `{key, value}` objects.
+    request_params = url.get("urtEndpointOptions", {}).get("requestParams", {})
+    return {
+        "url": url.get("url"),
+        "urlType": url.get("urlType"),
+        "urtEndpointOptions": {
+            "requestParams": [{"key": k, "value": v} for k, v in request_params.items()]
+        },
+    }
+
+
+def _guide_trend_to_obj(item: dict) -> dict:
+    trend = item["item"]["content"]["trend"]
+    meta = trend.get("trendMetadata", {})
+    guide_meta = (
+        item["item"]
+        .get("clientEventInfo", {})
+        .get("details", {})
+        .get("guideDetails", {})
+        .get("transparentGuideDetails", {})
+        .get("trendMetadata", {})
+    )
+
+    metadata: dict = {
+        "domain_context": meta.get("domainContext", ""),
+        "meta_description": meta.get("metaDescription", ""),
+    }
+    if "url" in meta:
+        metadata["url"] = _guide_url_to_obj(meta["url"])
+
+    obj: dict = {
+        "name": trend["name"],
+        "trend_url": _guide_url_to_obj(trend["url"]),
+        "trend_metadata": metadata,
+    }
+    if guide_meta.get("position") is not None:
+        obj["rank"] = guide_meta["position"]
+    return obj
+
+
+def _extract_guide_trends(res: dict) -> Generator[dict, None, None]:
+    for ins in res.get("timeline", {}).get("instructions", []):
+        for entry in ins.get("addEntries", {}).get("entries", []):
+            module = entry.get("content", {}).get("timelineModule")
+            if not module:
+                continue
+            for item in module.get("items", []):
+                if "trend" in item.get("item", {}).get("content", {}):
+                    yield item
+
+
 def parse_trends(rep: httpx.Response, limit: int = -1) -> Generator[Trend, None, None]:
-    return _parse_items(rep, kind="trends", limit=limit)  # type: ignore
+    res = rep if isinstance(rep, dict) else rep.json()
+
+    ids = set()
+    for item in _extract_guide_trends(res):
+        if limit != -1 and len(ids) >= limit:
+            break
+
+        try:
+            obj = _guide_trend_to_obj(item)
+            tmp = Trend.parse(obj)
+            if tmp.id not in ids:
+                ids.add(tmp.id)
+                yield tmp
+        except Exception as e:
+            _write_dump("trends", e, item, res)
+            continue
