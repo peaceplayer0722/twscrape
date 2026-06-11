@@ -260,6 +260,8 @@ async def _find_indices_url(scripts: list[str], clt: httpx.AsyncClient) -> str:
     finally:
         for t in tasks:
             t.cancel()
+        # await the cancellations so pending httpx connections are torn down
+        await asyncio.gather(*tasks, return_exceptions=True)
 
     raise Exception("Couldn't get XClientTxId indices script")
 
@@ -319,13 +321,17 @@ async def load_keys(
 class XClIdGen:
     @staticmethod
     async def create(clt: httpx.AsyncClient | None = None, proxy: str | None = None) -> "XClIdGen":
+        own_client = clt is None  # close only the client we created ourselves
         clt = clt or _make_client(proxy=proxy)
-        text = await get_tw_page_text("https://x.com/tesla", clt=clt)
-        soup = bs4.BeautifulSoup(text, "html.parser")
+        try:
+            text = await get_tw_page_text("https://x.com/tesla", clt=clt)
+            soup = bs4.BeautifulSoup(text, "html.parser")
 
-        vk_bytes, anim_key = await load_keys(soup, clt=clt)
-        clid_gen = XClIdGen(vk_bytes, anim_key)
-        return clid_gen
+            vk_bytes, anim_key = await load_keys(soup, clt=clt)
+            return XClIdGen(vk_bytes, anim_key)
+        finally:
+            if own_client:
+                await clt.aclose()
 
     def __init__(self, vk_bytes: list[int], anim_key: str):
         self.vk_bytes = vk_bytes

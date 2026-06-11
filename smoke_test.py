@@ -21,8 +21,10 @@ x-client-transaction-id 生成の修正（issue #312 / sign.o-*.js 対応）が
 注意:
   user_by_id（UserByRestId）は X 側で廃止済みで 403 を返す。twscrape は 403 を
   「セッション失効/BAN」とみなして該当アカウントを inactive 化し、リトライで全
-  アカウントを消費してしまう。そのため user_by_id は **最後** に実行し、本テスト
-  の前後で locks 解除 + 全アカウント active 化を自動で行う。
+  アカウントを消費してしまう。そのため user_by_id は **最後** に実行する。
+  終了時には「開始時 active だったのに error_msg 無しで inactive 化された分だけ」
+  を復元する（RESTORE_ACCOUNTS）。手動で inactive にしたアカウントや BAN 検出
+  （error_msg 付き）はそのまま尊重し、勝手に active 化しない。
 
 使い方:
     python3 smoke_test.py
@@ -44,7 +46,9 @@ from twscrape.logger import set_log_level
 DB_FILE = "accounts.db"          # アカウント DB
 SLEEP = 5.0                      # 各リクエスト間の待機秒数
 LIMIT = 20                       # ページング系メソッドの取得上限（≒1ページ=1リクエスト）
-RESET_ACCOUNTS = True            # 開始時・終了時に locks 解除 + 全アカウント active 化
+RESTORE_ACCOUNTS = True          # 終了時に「開始時 active かつ error_msg 無しで inactive 化された
+                                 # 分だけ」復元する（最後の user_by_id で落ちた分を戻す）。
+                                 # 手動で inactive にしたアカウントや BAN 検出（error_msg 付き）は触らない。
 LOG_ROOT = "smoke_test_logs"     # ログ出力先のルートディレクトリ
 
 SEARCH_Q = "elon musk"           # 検索クエリ
@@ -72,10 +76,20 @@ class Tee:
         self._fh.close()
 
 
-async def reset_accounts(api: API) -> None:
+async def snapshot_active(api: API) -> dict[str, bool]:
+    """開始時の各アカウントの active 状態を記録する。"""
+    return {a.username: a.active for a in await api.pool.get_all()}
+
+
+async def restore_active(api: API, snapshot: dict[str, bool]) -> int:
+    """開始時 active だったのに error_msg 無しで inactive 化された分だけ復元。
+    手動 inactive（開始時から非 active）や BAN 検出（error_msg 付き）は触らない。"""
+    restored = 0
     for a in await api.pool.get_all():
-        await api.pool.set_active(a.username, True)
-    await api.pool.reset_locks()
+        if snapshot.get(a.username) and not a.active and not a.error_msg:
+            await api.pool.set_active(a.username, True)
+            restored += 1
+    return restored
 
 
 async def active_count(api: API) -> int:
@@ -161,8 +175,7 @@ async def main():
     run_dir.mkdir(parents=True, exist_ok=True)
     log = Tee(run_dir / "run.log")
 
-    if RESET_ACCOUNTS:
-        await reset_accounts(api)
+    snapshot = await snapshot_active(api)
 
     accs = await api.pool.get_all()
     log.print(f"ログ出力先: {run_dir}/")
@@ -201,9 +214,9 @@ async def main():
         if i < total:
             await asyncio.sleep(SLEEP)
 
-    if RESET_ACCOUNTS:
-        await reset_accounts(api)
-        log.print("\n（テスト後: locks 解除 + 全アカウント active 化を実施しました）")
+    if RESTORE_ACCOUNTS:
+        n = await restore_active(api, snapshot)
+        log.print(f"\n（テスト後: 開始時 active だったアカウント {n} 件を復元しました）")
 
     # サマリ（コンソール + summary.json）
     counts: dict[str, int] = {}
