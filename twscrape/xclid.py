@@ -13,9 +13,13 @@ import httpx
 from fake_useragent import UserAgent
 
 
-def _make_client(proxy: str | None = None) -> httpx.AsyncClient:
+def _make_client(
+    proxy: str | None = None, cookies: dict[str, str] | None = None
+) -> httpx.AsyncClient:
     headers = {"user-agent": UserAgent().chrome}
-    return httpx.AsyncClient(headers=headers, follow_redirects=True, proxy=proxy)
+    return httpx.AsyncClient(
+        headers=headers, follow_redirects=True, proxy=proxy, cookies=cookies
+    )
 
 
 async def get_tw_page_text(url: str, clt: httpx.AsyncClient | None = None):
@@ -320,9 +324,16 @@ async def load_keys(
 
 class XClIdGen:
     @staticmethod
-    async def create(clt: httpx.AsyncClient | None = None, proxy: str | None = None) -> "XClIdGen":
+    async def create(
+        clt: httpx.AsyncClient | None = None,
+        proxy: str | None = None,
+        cookies: dict[str, str] | None = None,
+    ) -> "XClIdGen":
+        # X serves a different web build to authenticated vs anonymous sessions.
+        # Only authenticated sessions reliably contain the indices this parser
+        # depends on (see INDICES_FILE_RE / issue #320).
         own_client = clt is None  # close only the client we created ourselves
-        clt = clt or _make_client(proxy=proxy)
+        clt = clt or _make_client(proxy=proxy, cookies=cookies)
         try:
             text = await get_tw_page_text("https://x.com/tesla", clt=clt)
             soup = bs4.BeautifulSoup(text, "html.parser")
