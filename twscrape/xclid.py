@@ -1,7 +1,6 @@
 import asyncio
 import base64
 import hashlib
-import json
 import math
 import random
 import re
@@ -52,44 +51,55 @@ def script_url(k: str, v: str):
     return f"https://abs.twimg.com/responsive-web/client-web/{k}.{v}.js"
 
 
-def _js_obj_to_dict(s: str) -> dict:
-    """
-    Parse a JavaScript object literal with unquoted numeric keys into a Python dict.
-    Handles both plain integers (20113) and scientific notation (88e3 → 88000).
-    """
-    # Scientific notation first so the plain-int pass does not consume only the mantissa
-    s = re.sub(r'\b(\d+e\d+)(?=\s*:)', lambda m: '"' + str(int(float(m.group(1)))) + '"', s)
-    # Plain integer keys
-    s = re.sub(r'\b(\d+)(?=\s*:)', r'"\1"', s)
-    return json.loads('{' + s + '}')
-
-
+# Current X web build (Vite): script bundles are linked directly in the page
+# HTML under https://abs.twimg.com/x-web/.../*.js (modulepreload links + entry).
 ASSET_URL_RE = re.compile(r"https://[\w.-]+/x-web/[\w./-]+\.js")
+# Webpack build (served again to authenticated sessions as of 2026-10):
+# vendor/main/i18n are preloaded directly, other chunks come from the chunk map.
+RESPONSIVE_WEB_URL_RE = re.compile(r"https://[\w.-]+/responsive-web/client-web/[\w./-]+\.js")
+LEGACY_MAIN_RE = re.compile(r"/client-web/main\.([^.\"']+)\.js")
+CHALLENGE_SCRIPT_RE = re.compile(r"/cdn-cgi/challenge-platform/(?:scripts|h)/")
+# Chunk hashes are exactly 7 (before 2026-08-24) or 16 lowercase hex digits.
+CHUNK_HASH_RE = re.compile(r"[0-9a-f]{7}|[0-9a-f]{16}")
 
 
 def get_scripts_list(text: str) -> list[str]:
-    # Current X web build (Vite): script bundles are linked directly in the page
-    # under https://abs.twimg.com/x-web/.../*.js (modulepreload links + entry).
-    urls = list(dict.fromkeys(ASSET_URL_RE.findall(text)))
-    if urls:
-        return urls
+    """
+    Extract all known script URL formats from the X page HTML.
 
-    # Legacy build fallback: reconstruct URLs from the webpack chunk map
-    # X.u = e => "" + (({name_map})[e] || e) + "." + ({hash_map})[e] + "a.js"
-    # Two separate maps: chunk_id → chunk_name, chunk_id → hash.
-    try:
-        m = re.search(r'[\w_]+\.u=e=>""\+\(\(\{', text)
-        if not m:
-            raise IndexError("script URL builder not found")
-        rest = text[m.end():]
-        name_raw = rest.split('})[e]||e)')[0]
-        rest_after = rest[len(name_raw):]
-        hash_raw = rest_after.split('"."+({')[1].split('})[e]+"a.js"')[0]
-        names = _js_obj_to_dict(name_raw)
-        hashes = _js_obj_to_dict(hash_raw)
-        return [script_url(names.get(k, k), f"{h}a") for k, h in hashes.items()]
-    except (json.JSONDecodeError, IndexError) as e:
-        raise Exception("Failed to parse scripts") from e
+    x-web/Vite and responsive-web scripts can be linked directly. The webpack
+    build additionally embeds two chunk maps used to build lazy chunk URLs:
+      - hash map {chunk_id: "hexchars"}  values are exactly 7 or 16 hex digits
+      - name map {chunk_id: "name"}      values are human-readable chunk names
+      URL format: https://abs.twimg.com/responsive-web/client-web/{name}.{hash}a.js
+
+    The maps are collected by their key/value shape instead of by matching the
+    `X.u=e=>...` builder expression, whose exact form keeps changing between
+    builds (e.g. 2026-10 dropped the leading `""+`).
+    Ported from upstream vladkens/twscrape (#328).
+    """
+    urls = ASSET_URL_RE.findall(text) + RESPONSIVE_WEB_URL_RE.findall(text)
+    if main_match := LEGACY_MAIN_RE.search(text):
+        urls.append(script_url("main", main_match.group(1)))
+
+    # Cloudflare interstitial: the page only loads the challenge script and no
+    # app bundles (upstream issue #330).
+    if not urls and CHALLENGE_SCRIPT_RE.search(text):
+        raise Exception("Failed to parse scripts: Cloudflare challenge page served")
+
+    hash_map: dict[str, str] = {}
+    name_map: dict[str, str] = {}
+    for m in re.finditer(r'(\d+):"([^"]+)"', text):
+        key, val = m.group(1), m.group(2)
+        if CHUNK_HASH_RE.fullmatch(val):
+            hash_map[key] = val
+        else:
+            name_map[key] = val
+
+    urls.extend(script_url(name_map.get(k, k), f"{h}a") for k, h in hash_map.items())
+    if not urls:
+        raise Exception("Failed to parse scripts: no X web scripts found")
+    return list(dict.fromkeys(urls))
 
 
 # MARK: XClientTxId parsing
@@ -204,7 +214,7 @@ def cacl_anim_key(frames: list[float], target_time: float) -> str:
     val = Cubic(curves).get_value(target_time)
 
     color = interpolate(from_color, to_color, val)
-    color = [value if value > 0 else 0 for value in color]
+    color = [max(0, min(255, value)) for value in color]
     rotation = interpolate(from_rotation, to_rotation, val)
 
     matrix = get_rotation_matrix(rotation[0])
@@ -313,6 +323,7 @@ async def load_keys(
     frame_time = 1
     for x in anim_idx[1:]:
         frame_time *= vk_bytes[x] % 16
+    frame_time = math.floor(frame_time / 10 + 0.5) * 10  # JS Math.round to nearest 10
 
     frame_idx = vk_bytes[anim_idx[0]] % 16
     frame_row = anim_arr[frame_idx]
